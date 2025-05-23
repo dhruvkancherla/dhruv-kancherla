@@ -6,13 +6,21 @@ import '../styles/Home.css';
 
 const Home = () => {
   return (
-    <div className="home-container">
-      <div className="hero-section">
+    <div className="home-container">      <div className="hero-section">
+        <motion.div 
+          className="hero-image"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <img src={profilePic} alt="Dhruv Kancherla" />
+        </motion.div>
+        
         <motion.div 
           className="hero-content"
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h1>Hi, I'm <span className="highlight">Dhruv Kancherla</span></h1>
           <h2>Business Administration Professional</h2>
@@ -21,15 +29,6 @@ const Home = () => {
             and a passion for developing innovative business solutions.
           </p>
           <div className="hero-buttons">
-            {/* <Link to="/about">
-              <motion.button 
-                className="primary-button"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                About Me
-              </motion.button>
-            </Link> */}
             <Link to="/contact">
               <motion.button 
                 className="secondary-button"
@@ -40,15 +39,6 @@ const Home = () => {
               </motion.button>
             </Link>
           </div>
-        </motion.div>
-        
-        <motion.div 
-          className="hero-image"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <img src={profilePic} alt="Dhruv Kancherla" />
         </motion.div>
       </div>
 

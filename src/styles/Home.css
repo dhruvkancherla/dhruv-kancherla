@@ -7,29 +7,32 @@
 
 .hero-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 6rem 5%;
-  background: linear-gradient(to right, #f8f9fa, #e9ecef);
-  min-height: 80vh;
+  justify-content: center;
+  padding: 4rem 5%;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  min-height: 90vh;
+  text-align: center;
 }
 
 .hero-content {
-  flex: 1;
-  max-width: 600px;
+  max-width: 800px;
+  margin-top: 2rem;
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--dark-color);
 }
 
 .hero-content h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 
 .hero-content p {
@@ -37,27 +40,33 @@
   color: #555;
   margin-bottom: 2rem;
   line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-buttons {
   display: flex;
+  justify-content: center;
   gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .hero-image {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 450px;
+  margin-bottom: 2rem;
 }
 
 .hero-image img {
   width: 100%;
-  max-width: 350px;
-  border-radius: 20px;
+  max-width: 200px;
+  border-radius: 50%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border: 5px solid white;
+  object-fit: cover;
+  aspect-ratio: 1/1;
 }
 
 .home-sections {
@@ -66,6 +75,8 @@
   gap: 2rem;
   padding: 5rem 5%;
   background-color: white;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .home-section {
@@ -123,17 +134,7 @@
 
 @media screen and (max-width: 900px) {
   .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 4rem 1rem;
-  }
-
-  .hero-content {
-    margin-bottom: 3rem;
-  }
-
-  .hero-buttons {
-    justify-content: center;
+    padding: 3rem 1rem;
   }
 
   .hero-content h1 {
@@ -141,7 +142,7 @@
   }
 
   .hero-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .home-sections {
